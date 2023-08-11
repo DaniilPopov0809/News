@@ -1,99 +1,45 @@
-# Parcel template
+## App view
 
-Этот проект был создан при помощи Parcel. Для знакомства и настройки
-дополнительных возможностей [обратись к документации](https://parceljs.org/).
+![Overview_light](./assets/overview.jpg)
+![Overview_dark](./assets/overview_2.jpg)
 
-## Подготовка нового проекта
+## Description of the project
 
-1. Убедись что на компьютере установлена LTS-версия Node.js.
-   [Скачай и установи](https://nodejs.org/en/) её если необходимо.
-2. Склонируй этот репозиторий.
-3. Измени имя папки с `parcel-project-template` на имя своего проекта.
-4. Создай новый пустой репозиторий на GitHub.
-5. Открой проект в VSCode, запусти терминал и свяжи проект с GitHub-репозиторием
-   [по инструкции](https://docs.github.com/en/get-started/getting-started-with-git/managing-remote-repositories#changing-a-remote-repositorys-url).
-6. Установи зависимости проекта в терминале командой `npm install` .
-7. Запусти режим разработки, выполнив команду `npm start`.
-8. Перейди в браузере по адресу [http://localhost:1234](http://localhost:1234).
-   Эта страница будет автоматически перезагружаться после сохранения изменений в
-   файлах проекта.
+A website with adaptive layouts desing for News site.
 
-## Файлы и папки
+## Implemented
 
-- Все паршалы файлов стилей должны лежать в папке `src/sass` и импортироваться в
-  файлы стилей страниц. Например, для `index.html` файл стилей называется
-  `index.scss`.
-- Изображения добавляй в папку `src/images`. Сборщик оптимизирует их, но только
-  при деплое продакшн версии проекта. Все это происходит в облаке, чтобы не
-  нагружать твой компьютер, так как на слабых машинах это может занять много
-  времени.
+1. This application comprises three main sections: Home, Favorites, and Read.
 
-## Деплой
+2. Upon launching the Home section, you'll be presented with the most recent and popular news articles. This area allows you to explore articles of your interest. You have the ability to search articles based on dates, categories, and specific keywords. The Home section also features a weather widget to provide you with current weather information.
 
-Для настройки деплоя проекта необходимо выполнить несколько дополнительных шагов
-по настройке твоего репозитория. Зайди во вкладку `Settings` и в подсекции
-`Actions` выбери выбери пункт `General`.
+3. You can mark articles you like as favorites by clicking the "Add to Favorites" button. These favored articles will be saved to your device's Local Storage.
 
-![GitHub actions settings](./assets/actions-config-step-1.png)
+4. In the "Read" section, you can access articles that you've already read. These articles are also stored in your device's Local Storage.
 
-Пролистай страницу до последней секции, в которой убедись что выбраны опции как
-на следующем изображении и нажми `Save`. Без этих настроек у сборки будет
-недостаточно прав для автоматизации процесса деплоя.
+5. The application's header includes navigation links between the different sections and a theme switcher. In the mobile version of the app, these elements are accessible through the mobile menu.
 
-![GitHub actions settings](./assets/actions-config-step-2.png)
+## Technology stack:
 
-Продакшн версия проекта будет автоматически собираться и деплоиться на GitHub
-Pages, в ветку `gh-pages`, каждый раз когда обновляется ветка `main`. Например,
-после прямого пуша или принятого пул-реквеста. Для этого необходимо в файле
-`package.json` отредактировать поле `homepage` и скрипт `build`, заменив
-`your_username` и `your_repo_name` на свои, и отправить изменения на GitHub.
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![SASS](https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
+![GIT](https://img.shields.io/badge/GIT-E44C30?style=for-the-badge&logo=git&logoColor=white)
+![AJAX](https://img.shields.io/badge/AJAX-35FFF8?style=for-the-badge)
+![PARCEL](https://img.shields.io/badge/PARCEL-090000?style=for-the-badge)
 
-```json
-"homepage": "https://your_username.github.io/your_repo_name/",
-"scripts": {
-  "build": "parcel build src/*.html --public-url /your_repo_name/"
-},
-```
+## Team of developers:
 
-Далее необходимо зайти в настройки GitHub-репозитория (`Settings` > `Pages`) и
-выставить раздачу продакшн версии файлов из папки `/root` ветки `gh-pages`, если
-это небыло сделано автоматически.
+- [Serhii Vasylenko](https://github.com/serhii-vasylenko) - Team-lead (Frontend), developer
+- [Yuliia Rudenko](https://github.com/yulyarudenko88) - Scrum master, Frontend developer 
+- [Oleksandra Stusova](https://github.com/OleksandraSt) - Frontend developer
+- [Iryna Akulova](https://github.com/IraAkulova) - Frontend developer
+- [Liudmyla Cheremisina](https://github.com/Liudmyla-ukraineif) - Frontend developer
+- [Daniil Popov](https://github.com/DaniilPopov0809) - Frontend developer
+- [Inna Khavrat](https://github.com/khavrat) - Frontend developer
+- [Tetiana Prokopchuk](https://github.com/lovember26) - Frontend developer
+- [Kateryna Nikitina](https://github.com/KaterynaNikitina) - Frontend developer
 
-![GitHub Pages settings](./assets/repo-settings.png)
-
-### Статус деплоя
-
-Статус деплоя крайнего коммита отображается иконкой возле его идентификатора.
-
-- **Желтый цвет** - выполняется сборка и деплой проекта.
-- **Зеленый цвет** - деплой завершился успешно.
-- **Красный цвет** - во время линтинга, сборки или деплоя произошла ошибка.
-
-Более детальную информацию о статусе можно посмотреть кликнув по иконке, и в
-выпадающем окне перейти по ссылке `Details`.
-
-![Deployment status](./assets/status.png)
-
-### Живая страница
-
-Через какое-то время, обычно пару минут, живую страницу можно будет посмотреть
-по адресу указанному в отредактированном свойстве `homepage`. Например, вот
-ссылка на живую версию для этого репозитория
-[https://goitacademy.github.io/parcel-project-template](https://goitacademy.github.io/parcel-project-template).
-
-Если открывается пустая страница, убедись что во вкладке `Console` нет ошибок
-связанных с неправильными путями к CSS и JS файлам проекта (**404**). Скорее
-всего у тебя неправильное значение свойства `homepage` или скрипта `build` в
-файле `package.json`.
-
-## Как это работает
-
-![How it works](./assets/how-it-works.png)
-
-1. После каждого пуша в ветку `main` GitHub-репозитория, запускается специальный
-   скрипт (GitHub Action) из файла `.github/workflows/deploy.yml`.
-2. Все файлы репозитория копируются на сервер, где проект инициализируется и
-   проходит сборку перед деплоем.
-3. Если все шаги прошли успешно, собранная продакшн версия файлов проекта
-   отправляется в ветку `gh-pages`. В противном случае, в логе выполнения
-   скрипта будет указано в чем проблема.
+## Link to web app:
+[Link to web app](https://serhii-vasylenko.github.io/news-app-team12/)
